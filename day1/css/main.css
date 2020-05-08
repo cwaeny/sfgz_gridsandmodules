@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  background-color: #3C7C57;
+  /*padding-top: 15px;
+  padding-bottom: 15px;*/
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  overflow-x:hidden;
+}
+
+.raster {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 23vh 23vh 23vh 23vh;
+  grid-gap: 2vh;
+}
+
+.a {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-bottom: 15px solid #ffffff;
+  border-left: 15px solid #ffffff;
+  border-right: 15px solid #ffffff;
+}
+
+.b {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border-bottom: 15px solid #ffffff;
+  border-top: 15px solid #ffffff;
+  border-right: 15px solid #ffffff;
+}
+
+.c {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  border-left: 15px solid #ffffff;
+  border-top: 15px solid #ffffff;
+  border-right: 15px solid #ffffff;
+}
+
+.names {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-self: end;
+}
+
+.adress {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: end;
+}
+
+.hours {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.adress > h2 {
+  margin-bottom: 2rem;
+}
+
+.names > p {
+  margin-top: 0.25rem;
+}
+
+.hours > p {
+  font-size: 1.05rem;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+}
