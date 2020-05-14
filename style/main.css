@@ -9,6 +9,10 @@ body {
   color: white;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .raster {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
