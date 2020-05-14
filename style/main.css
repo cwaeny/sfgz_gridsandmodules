@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: url('../img/background-img.jpg');
+  background-position: center;
+  background-repeat:no-repeat;
+  font-size: 16px;
+  color: white;
+}
+
+.raster {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25vh 25vh 25vh 25vh;
+}
+
+.title {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 0;
+  grid-row-start: 1;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  color: white;
+  text-align: right;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+
+.day1 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-start: 2;
+}
+
+.day1 {
+  background-color: rgba(255,255,255,0.25);
+  backdrop-filter: blur(1rem);
+  border: rgba(255,255,255,0) 1px solid;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: all 0.5s ease;
+}
+
+.day1:hover {
+  border: rgba(255,255,255,1) 1px solid;
+}
+
+.day2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-start: 3;
+}
+
+.day2 {
+  background-color: rgba(255,255,255,0.4);
+  backdrop-filter: blur(1rem);
+  border: rgba(255,255,255,0) 1px solid;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: all 0.5s ease;
+}
+
+.day2:hover {
+  border: rgba(255,255,255,1) 1px solid;
+}
+
+.day3 {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-start: 3;
+}
+
+.day3 {
+  background-color: rgba(255,255,255,0.25);
+  backdrop-filter: blur(1rem);
+  border: rgba(255,255,255,0) 1px solid;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: all 0.5s ease;
+}
+
+.day3:hover {
+  border: rgba(255,255,255,1) 1px solid;
+}
+
+h4 {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn span {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+ svg {
+   margin-right: 10px;
+ }
+
+ .btnWrap {
+   margin-top: 55%;
+ }
