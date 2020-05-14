@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-image: url('../img/background-img.jpg');
+  background-image: url('../img/background-img2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat:no-repeat;
@@ -21,10 +21,11 @@ body {
 }
 
 .title {
-  grid-column-start: 4;
-  grid-column-end: 6;
-  grid-row-start: 0;
-  grid-row-start: 1;
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  transform: rotate(90deg);
+  align-self: start;
 }
 
 h1 {
@@ -32,7 +33,7 @@ h1 {
   font-size: 1.75rem;
   line-height: 1.25;
   color: white;
-  text-align: right;
+  text-align: left;
 }
 
 .bold {
@@ -49,7 +50,7 @@ h1 {
 
 .day1 {
   background-color: rgba(255,255,255,0.25);
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(0.35rem);
   border: rgba(255,255,255,0) 1px solid;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -68,8 +69,8 @@ h1 {
 }
 
 .day2 {
-  background-color: rgba(255,255,255,0.4);
-  backdrop-filter: blur(1rem);
+  background-color: rgba(255,255,255,0.25);
+  backdrop-filter: blur(0.35rem);
   border: rgba(255,255,255,0) 1px solid;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -89,7 +90,7 @@ h1 {
 
 .day3 {
   background-color: rgba(255,255,255,0.25);
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(0.35rem);
   border: rgba(255,255,255,0) 1px solid;
   padding-left: 1rem;
   padding-right: 1rem;
