@@ -104,6 +104,27 @@ h1 {
   border: rgba(255,255,255,1) 1px solid;
 }
 
+.day4 {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 0;
+  grid-row-start: 1;
+  position: relative;
+}
+
+.day4 {
+  background-color: rgba(255,255,255,0.25);
+  backdrop-filter: blur(0.35rem);
+  border: rgba(255,255,255,0) 1px solid;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: all 0.5s ease;
+}
+
+.day4:hover {
+  border: rgba(255,255,255,1) 1px solid;
+}
+
 h4 {
   font-size: 1.25rem;
   color: white;
