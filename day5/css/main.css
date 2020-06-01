@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  background-color: black;
+  font-size: 16px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+p {
+  bottom: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". square1 . . ."
+    ". . square2 . ."
+    ". . . square3 .";
+  height: 100vh;
+  grid-gap: 2vh;
+}
+
+.a {
+  grid-area: square1;
+  background-color: #272727;
+  min-height: 5rem;
+  padding: 1rem;
+  justify-content: end;
+}
+
+.b {
+  grid-area: square2;
+  background-color: #272727;
+  min-height: 5rem;
+  padding: 1rem;
+}
+
+.c {
+  grid-area: square3;
+  background-color: #272727;
+  min-height: 5rem;
+  padding: 1rem;
+}
