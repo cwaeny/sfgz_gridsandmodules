@@ -294,6 +294,11 @@ section.delta {
   margin: 0;
 }
 
+span.break {
+  font-size: 2rem;
+  transform: rotate(45deg);
+}
+
 span.main {
   font-family: 'nimbus-sans-extended', sans-serif;
   font-size: 4.125rem;
