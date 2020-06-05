@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div id="_progress"></div>
   <div class="soundWrapper">
     <audio id="change">
       <source src="audio/change_by_NF.mp3" type="audio/mpeg">
@@ -38,7 +39,7 @@
           <p>Yeah, look</p>
           <p>I don't do drugs, I'm addicted to the pain though</p>
           <p>Yeah, I been on it for a while, dunno how to put it down</p>
-          <p>Gotta have it, it's a habit I'ma <strong>bre</strong><span class="break"><strong>ak</strong> though</span></p>
+          <p>Gotta have it, it's a habit I'ma <strong>break</strong> though</p>
         </div>
       </section>
       <section class="beta">
@@ -123,6 +124,22 @@
       function pauseAudio() {
         x.pause();
       }
+
+      document.addEventListener(
+        "scroll",
+          function() {
+            var scrollTop =
+            document.documentElement["scrollTop"] || document.body["scrollTop"];
+            var scrollBottom =
+            (document.documentElement["scrollHeight"] ||
+            document.body["scrollHeight"]) - document.documentElement.clientHeight;
+            scrollPercent = scrollTop / scrollBottom * 100 + "%";
+            document
+      .getElementById("_progress")
+      .style.setProperty("--scroll", scrollPercent);
+  },
+  { passive: true }
+);
     </script>
 
   </body>
