@@ -1418,7 +1418,7 @@ h4 {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  animation-delay: 0.6s;
+  animation-delay: 0.8s;
 }
 
 .botFree {
@@ -1432,7 +1432,7 @@ h4 {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  animation-delay: 0.6s;
+  animation-delay: 0.8s;
 }
 
 @keyframes position1 {
@@ -1464,7 +1464,7 @@ h4 {
     opacity: 1;
   }
 }
-/*
+
 .riots {
   animation: riots;
   animation-duration: 2s;
@@ -1484,14 +1484,36 @@ h4 {
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(100);
-    -moz-transform: scale(100);
-    -o-transform: scale(100);
-    -ms-transform: scale(100);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
   }
-}*/
+}
 
 /* – VITALS – */
+
+.heart {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 13;
+  grid-row-end: 14;
+  align-self: end;
+  text-align: center;
+  opacity: 0;
+  transition: all cubic-bezier(.215,.61,.355,1) 0.5s;
+  transition-delay: 3.5s;
+  animation: beat .55s infinite alternate;
+	transform-origin: center;
+}
+
+.heart.isinview {
+  opacity: 1;
+}
+
+@keyframes beat{
+	to { transform: scale(1.025); }
+}
 
 .vitals {
   grid-column-start: 1;
@@ -1499,6 +1521,7 @@ h4 {
   grid-row-start: 14;
   grid-row-end: 15;
   text-align: right;
+  align-self: end;
 }
 
 .breathing {
