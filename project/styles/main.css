@@ -1465,32 +1465,6 @@ h4 {
   }
 }
 
-.riots {
-  animation: riots;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  animation-delay: 1.5s;
-}
-
-@keyframes riots {
-  0% {
-    opacity: 1;
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-    -ms-transform: scale(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-  }
-}
-
 /* – VITALS – */
 
 .heart {
@@ -1502,7 +1476,7 @@ h4 {
   text-align: center;
   opacity: 0;
   transition: all cubic-bezier(.215,.61,.355,1) 0.5s;
-  transition-delay: 3.5s;
+  transition-delay: 1s;
   animation: beat .55s infinite alternate;
 	transform-origin: center;
 }
@@ -1524,11 +1498,63 @@ h4 {
   align-self: end;
 }
 
+.vitalsTop {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.vitalsBot {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.vitalsTop.isinview {
+  animation: vitals1;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-delay: 0.8s;
+}
+
+@keyframes vitals1 {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.vitalsBot.isinview {
+  animation: vitals2;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-delay: 1.6s;
+}
+
+@keyframes vitals2 {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ––– breathing ––– */
+
 .breathing {
   grid-column-start: 3;
   grid-column-end: 6;
-  grid-row-start: 17;
-  grid-row-end: 18;
+  grid-row-start: 16;
+  grid-row-end: 17;
   align-self: end;
 }
 
@@ -1538,8 +1564,43 @@ h4 {
   grid-row-start: 17;
   grid-row-end: 18;
   align-self: end;
-  z-index: -3;
 }
+
+h4.spacing {
+  opacity: 0;
+  letter-spacing: normal;
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 1.6s;
+}
+
+h4.spacing.isinview {
+  opacity: 1;
+  animation: spacing;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+  animation-delay: 1.6s;
+}
+
+@keyframes spacing {
+  to {
+    letter-spacing: 1rem;
+  }
+}
+
+.breathing {
+  opacity: 0;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+  transition-delay: 1s;
+}
+
+.breathing.isinview {
+  opacity: 1;
+}
+
+/* ––– Positive Thought ––– */
 
 .positive {
   grid-column-start: 3;
@@ -1563,6 +1624,31 @@ h4 {
   grid-row-end: 27;
   align-self: end;
   text-align: center;
+}
+
+.typewriter h5 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid grey; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  opacity: 0;
+  margin: 0 auto;
+}
+
+.typewriter.isinview h5 {
+  width: 32em;
+  animation: typeLast 5s steps(40, end);
+  animation-fill-mode: forwards;
+}
+
+@keyframes typeLast {
+  0% {
+    width: 0;}
+  1% {
+    opacity: 1;}
+  99.9% {
+    border-right: .15em solid grey;}
+  100% {
+    opacity: 1; border: none;}
 }
 
 h5 {
