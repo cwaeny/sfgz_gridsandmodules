@@ -6,6 +6,7 @@
   <title>Running for change</title>
   <link rel="stylesheet" type="text/css" href="styles/main.css">
   <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+  <link rel="shortcut icon" type="image/jpg" href="img/favicon.jpg">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
       <source src="audio/change_by_NF.mp3" type="audio/mpeg">
       </audio>
       <div class="soundIcon">
-        <button onclick="playAudio()" type="button"><img src="img/sound.svg" type="image/svg"></button>
+        <button id="buttonClicker"  type="button"><img src="img/sound.svg" type="image/svg"></button>
       </div>
     </div>
     <section class="alpha">
@@ -204,9 +205,13 @@
           <h3>I'm tryna be on their side though</h3>
         </div>
 
+        <div class="riv checkview">
+          <h4 class="breakFlip checkview">rivals</h4>
+        </div>
+
         <div class="comfortable checkview">
           <h3 class="comfTop">Should I feel comfortable? I don't</h3>
-          <h3 class="comfBot">Last year I felt <span>suicidal</span></h3>
+          <h3 class="comfBot">Last year I felt <span class="silenceWord checkview">suicidal</span></h3>
         </div>
 
         <div class="different typewriter checkview">
@@ -244,9 +249,28 @@
 
 
       <script>
+      var buttonClickeron = document.getElementById("buttonClicker");
+
+
+      buttonClicker.onclick = function() {
+        if (buttonClicker.classList.contains('activeSound')) {
+          pauseAudio();
+          buttonClicker.classList.toggle("activeSound");
+        }
+        else {
+          playAudio();
+          buttonClicker.classList.toggle("activeSound");
+        }
+
+
+
+      }
+
+
       var x = document.getElementById("change");
       function playAudio() {
         x.play();
+
       }
       function pauseAudio() {
         x.pause();

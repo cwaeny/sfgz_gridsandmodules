@@ -850,7 +850,7 @@ span.main {
 section.epsilon {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(29, 17rem);
+  grid-template-rows: repeat(28, 17rem);
   grid-gap: 1.5rem;
   height: 100%;
 }
@@ -1115,6 +1115,47 @@ h4 {
 
 /* – FREEDOM – */
 
+.free {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  align-self: start;
+  opacity: 0;
+}
+
+.free.isinview {
+  animation: vibrate-1 0.3s linear infinite both;
+  animation-delay: 1.6s;
+}
+
+@keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  1% {
+    opacity: 1;
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
 .freedom {
   grid-column-start: 2;
   grid-column-end: 5;
@@ -1319,18 +1360,73 @@ h4.spacing.isinview {
 /* ––– Positive Thought ––– */
 
 .positive {
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
   grid-row-start: 20;
   grid-row-end: 22;
   writing-mode: vertical-rl;
+  opacity: 0;
+  transform: translateX(-75px);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+  transition-delay: 1s;
 }
+
+.positive.isinview {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.riv {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 20;
+  grid-row-end: 22;
+  align-self: center;
+  opacity: 0;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+  transition-delay: 1s;
+}
+
+.riv.isinview {
+  opacity: 1;
+}
+
+.breakFlip {
+  transform: rotateX(0);
+}
+
+.breakFlip.isinview {
+  animation: swing-bottom-bck 1.2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes swing-bottom-bck {
+  0% {
+    transform: rotateX(0);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotateX(180deg);
+    transform-origin: bottom;
+  }
+}
+
+
+
+
+/* ––– suicidal ––– */
 
 .comfortable {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 24;
   grid-row-end: 25;
+  opacity: 0;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+  transition-delay: 1s;
+}
+
+.comfortable.isinview {
+  opacity: 1;
 }
 
 .different {
