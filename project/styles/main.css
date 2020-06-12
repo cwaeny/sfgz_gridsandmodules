@@ -5,6 +5,16 @@
   font-family: 'nimbus-sans-extended', sans-serif;
 }
 
+::selection {
+  color: black;
+  background: white;
+}
+
+::-webkit-selection, ::-moz-selection {
+  color: black;
+  background: white;
+}
+
 body {
   background-color: black;
   color: white;
